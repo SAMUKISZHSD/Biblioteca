@@ -1,2 +1,2 @@
 # Biblioteca
-Sistema de uma biblioteca MVC com JAVA
+Sistema de uma Biblioteca funcional em Spring
