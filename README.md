@@ -9,11 +9,13 @@ Implementar um sistema simples que apresenta via CLI um menu de Biblioteca com a
 - Emprestar Livro
 - Devolver Livro
 
-<br> Sistema deverá persistir os dados em um Banco de Dados; </br>
-<br> Sistema não poderá utilizar nenhuma biblioteca externa para salvar dados; </br>
-<br> Sistema deverá ser feito com arquitetura MVC; </br>
+<h1> ⚙  Pré-requisitos </h1>
 
-<div align="center"> 
+- Sistema deverá persistir os dados em um Banco de Dados;
+- Sistema não poderá utilizar nenhuma biblioteca externa para salvar dados; 
+- Sistema deverá ser feito com arquitetura MVC; 
+
+<div> 
   <h1>Tecnologias Utilizadas</h1>
 
 [![My Skills](https://skillicons.dev/icons?i=github,java,vscode)](https://skillicons.dev)
