@@ -1,4 +1,4 @@
-# Biblioteca em Java
+# :books: Biblioteca em Java
 
 Implementar um sistema simples que apresenta via CLI um menu de Biblioteca com as opções:
 - Cadastrar Livro
