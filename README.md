@@ -1,13 +1,13 @@
 # :books: Biblioteca em Java
 
 Implementar um sistema simples que apresenta via CLI um menu de Biblioteca com as opções:
-- Cadastrar Livro
-- Listar Livros
-- Atualizar Livro
-- Excluir Livro
-- Buscar Livro
-- Emprestar Livro
-- Devolver Livro
+- Cadastrar Livro :heavy_check_mark:
+- Listar Livros :heavy_check_mark:
+- Atualizar Livro :heavy_check_mark:
+- Excluir Livro :heavy_check_mark:
+- Buscar Livro :heavy_check_mark:
+- Emprestar Livro :x:
+- Devolver Livro :x:
 
 <h1> ⚙  Pré-requisitos do sistema  </h1>
 
