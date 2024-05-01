@@ -3,6 +3,9 @@
 Implementar um sistema simples que apresenta via CLI um menu de Biblioteca com as opções:
 - Cadastrar Livro
 - Listar Livros
+- Atualizar Livro
+- Excluir Livro
+- Buscar Livro
 - Emprestar Livro
 - Devolver Livro
 
