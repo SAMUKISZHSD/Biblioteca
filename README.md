@@ -13,6 +13,15 @@ Implementar um sistema simples que apresenta via CLI um menu de Biblioteca com a
 <br> Sistema não poderá utilizar nenhuma biblioteca externa para salvar dados; </br>
 <br> Sistema deverá ser feito com arquitetura MVC; </br>
 
+<div align="center"> 
+  <h1>Tecnologias Utilizadas</h1>
+
+[![My Skills](https://skillicons.dev/icons?i=github,java,vscode)](https://skillicons.dev)
+
+ </div>
+<div>
+
+
 
 
 
