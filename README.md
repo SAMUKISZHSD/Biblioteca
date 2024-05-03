@@ -34,6 +34,7 @@ Navegue até o diretório do projeto (o diretório que contém o arquivo pom.xml
 
 ```
 mvn install
+mvn clean install
 ```
 
 <h1> Executar o projeto </h1>
