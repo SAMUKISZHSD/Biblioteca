@@ -35,4 +35,26 @@ public class LivroController {
   public List<Livro> listarLivros() {
     return livroDAO.listar().stream().map(entity -> (Livro) entity).toList();
   }
+  
+  public String emprestarLivro(int id) {
+    Livro livro = (Livro) livroDAO.buscar(id);
+    if (livro != null && !livro.isEmprestado()) {
+      livro.setEmprestado(true);
+      livroDAO.atualizar(livro);
+      return "Livro emprestado com sucesso!";
+    } else {
+      return "Não foi possível emprestar o livro.";
+    }
+  }
+
+  public String devolverLivro(int id) {
+    Livro livro = (Livro) livroDAO.buscar(id);
+    if (livro != null && livro.isEmprestado()) {
+      livro.setEmprestado(false);
+      livroDAO.atualizar(livro);
+      return "Livro devolvido com sucesso!";
+    } else {
+      return "Não foi possível devolver o livro.";
+    }
+  }
 }

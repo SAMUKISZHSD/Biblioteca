@@ -1,24 +1,25 @@
-package  com.biblioteca.model.entity;
+package com.biblioteca.model.entity;
 
 public class Livro extends AbstractEntity {
 
   private String titulo;
-
   private String autor;
-
   private int numPaginas;
+  private boolean emprestado;
 
   public Livro(String titulo, String autor, int numPaginas) {
     this.titulo = titulo;
     this.autor = autor;
     this.numPaginas = numPaginas;
+    this.emprestado = false;
   }
 
-  public Livro(int id, String titulo, String autor, int numPaginas) {
+  public Livro(int id, String titulo, String autor, int numPaginas, boolean emprestado) {
     super.setId(id);
     this.titulo = titulo;
     this.autor = autor;
     this.numPaginas = numPaginas;
+    this.emprestado = emprestado;
   }
 
   public String getTitulo() {
@@ -43,5 +44,13 @@ public class Livro extends AbstractEntity {
 
   public void setNumPaginas(int numPaginas) {
     this.numPaginas = numPaginas;
+  }
+
+  public boolean isEmprestado() {
+    return emprestado;
+  }
+
+  public void setEmprestado(boolean emprestado) {
+    this.emprestado = emprestado;
   }
 }
