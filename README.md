@@ -29,20 +29,6 @@ Implementar um sistema simples que apresenta via CLI um menu de Biblioteca com a
  </div>
 <div>
 
-<h1> Instalar as dependências </h1>
-Navegue até o diretório do projeto (o diretório que contém o arquivo pom.xml) no terminal e execute o comando 
-
-```
-mvn install
-mvn clean install
-```
-
-<h1> Executar o projeto </h1>
- Ainda no diretório do projeto, execute o comando. Isso irá iniciar o servidor Spring Boot e executar a aplicação. 
-
-```
-mvn spring-boot:run
-```
 
 
 
