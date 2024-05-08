@@ -5,20 +5,23 @@ public class Livro extends AbstractEntity {
   private String titulo;
   private String autor;
   private int numPaginas;
+  private int numCopias;
   private boolean emprestado;
 
-  public Livro(String titulo, String autor, int numPaginas) {
+  public Livro(String titulo, String autor, int numPaginas, int numCopias) {
     this.titulo = titulo;
     this.autor = autor;
     this.numPaginas = numPaginas;
+    this.numCopias = numCopias;
     this.emprestado = false;
   }
 
-  public Livro(int id, String titulo, String autor, int numPaginas, boolean emprestado) {
+  public Livro(int id, String titulo, String autor, int numPaginas, int numCopias, boolean emprestado) {
     super.setId(id);
     this.titulo = titulo;
     this.autor = autor;
     this.numPaginas = numPaginas;
+    this.numCopias = numCopias;
     this.emprestado = emprestado;
   }
 
@@ -44,6 +47,14 @@ public class Livro extends AbstractEntity {
 
   public void setNumPaginas(int numPaginas) {
     this.numPaginas = numPaginas;
+  }
+
+  public int getNumCopias() {
+    return numCopias;
+  }
+
+  public void setNumCopias(int numCopias) {
+    this.numCopias = numCopias;
   }
 
   public boolean isEmprestado() {

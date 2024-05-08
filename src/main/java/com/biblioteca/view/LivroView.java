@@ -11,6 +11,7 @@ public class LivroView {
     System.out.println("Título: " + livro.getTitulo());
     System.out.println("Autor: " + livro.getAutor());
     System.out.println("Número de páginas: " + livro.getNumPaginas());
+    System.out.println("Número de copias disponiveis: " + livro.getNumCopias());
   }
 
   public void mostrarListaLivros(List<Livro> livros) {

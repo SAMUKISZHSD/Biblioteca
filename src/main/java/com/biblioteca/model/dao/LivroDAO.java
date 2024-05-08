@@ -13,8 +13,8 @@ import java.util.List;
 
 public class LivroDAO implements IDAO {
 
-  private static final String INSERT_QUERY = "INSERT INTO livro (titulo, autor, num_paginas, emprestado) VALUES (?, ?, ?, ?)";
-  private static final String UPDATE_QUERY = "UPDATE livro SET titulo=?, autor=?, num_paginas=?, emprestado=? WHERE id=?";
+  private static final String INSERT_QUERY = "INSERT INTO livro (titulo, autor, num_paginas, num_copias, emprestado) VALUES (?, ?, ?, ?, ?)";
+  private static final String UPDATE_QUERY = "UPDATE livro SET titulo=?, autor=?, num_paginas=?, num_copias=?, emprestado=? WHERE id=?";
   private static final String DELETE_QUERY = "DELETE FROM livro WHERE id=?";
   private static final String SELECT_QUERY = "SELECT * FROM livro";
   private static final String SELECT_BY_ID_QUERY = "SELECT * FROM livro WHERE id=?";
@@ -49,7 +49,8 @@ public class LivroDAO implements IDAO {
       stmt.setString(1, livro.getTitulo());
       stmt.setString(2, livro.getAutor());
       stmt.setInt(3, livro.getNumPaginas());
-      stmt.setBoolean(4, livro.isEmprestado());
+      stmt.setInt(4, livro.getNumCopias());
+      stmt.setBoolean(5, livro.isEmprestado());
       stmt.executeUpdate();
     } catch (SQLException e) {
       e.printStackTrace();
@@ -64,8 +65,9 @@ public class LivroDAO implements IDAO {
       stmt.setString(1, livro.getTitulo());
       stmt.setString(2, livro.getAutor());
       stmt.setInt(3, livro.getNumPaginas());
-      stmt.setBoolean(4, livro.isEmprestado());
-      stmt.setInt(5, livro.getId());
+      stmt.setInt(4, livro.getNumCopias());
+      stmt.setBoolean(5, livro.isEmprestado());
+      stmt.setInt(6, livro.getId());
       stmt.executeUpdate();
     } catch (SQLException e) {
       e.printStackTrace();
@@ -91,7 +93,7 @@ public class LivroDAO implements IDAO {
       stmt.setInt(1, id);
       try (ResultSet rs = stmt.executeQuery()) {
         if (rs.next()) {
-          livro = new Livro(rs.getInt("id"), rs.getString("titulo"), rs.getString("autor"), rs.getInt("num_paginas"), rs.getBoolean("emprestado"));
+          livro = new Livro(rs.getInt("id"), rs.getString("titulo"), rs.getString("autor"), rs.getInt("num_paginas"), rs.getInt("num_copias"), rs.getBoolean("emprestado"));
         }
       }
     } catch (SQLException e) {
@@ -108,7 +110,7 @@ public class LivroDAO implements IDAO {
          ResultSet rs = stmt.executeQuery()) {
       while (rs.next()) {
         Livro livro = new Livro(rs.getInt("id"), rs.getString("titulo"), rs.getString("autor"),
-            rs.getInt("num_paginas"), rs.getBoolean("emprestado"));
+            rs.getInt("num_paginas"), rs.getInt("num_copias"), rs.getBoolean("emprestado"));
         livros.add(livro);
       }
     } catch (SQLException e) {

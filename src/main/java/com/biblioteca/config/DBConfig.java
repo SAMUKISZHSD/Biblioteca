@@ -23,6 +23,7 @@ public class DBConfig {
             titulo VARCHAR(255) NOT NULL,
             autor VARCHAR(255) NOT NULL,
             num_paginas INT NOT NULL,
+            num_copias INT NOT NULL,
             emprestado BOOLEAN NOT NULL
           )""";
       stmt.executeUpdate(sql);

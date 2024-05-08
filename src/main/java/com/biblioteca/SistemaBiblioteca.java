@@ -76,8 +76,10 @@ public class SistemaBiblioteca {
     String autor = scanner.nextLine();
     livroView.mostrarMensagem("Digite o número de páginas do livro:");
     int numPaginas = scanner.nextInt();
+    livroView.mostrarMensagem("Digite o número de copias dos livros disponiveis:");
+    int numCopias = scanner.nextInt();
 
-    Livro novoLivro = new Livro(titulo, autor, numPaginas);
+    Livro novoLivro = new Livro(titulo, autor, numPaginas, numCopias);
     String retorno = livroController.cadastrarLivro(novoLivro);
     livroView.mostrarMensagem(retorno);
   }
@@ -104,6 +106,9 @@ public class SistemaBiblioteca {
       livroView.mostrarMensagem("Digite o novo número de páginas do livro:");
       int numPaginas = scanner.nextInt();
       livro.setNumPaginas(numPaginas);
+      livroView.mostrarMensagem("Digite o novo número de copias disponiveis:");
+      int numCopias = scanner.nextInt();
+      livro.setNumCopias(numCopias);
       String retorno = livroController.atualizarLivro(livro);
       livroView.mostrarMensagem(retorno);
     } else {
