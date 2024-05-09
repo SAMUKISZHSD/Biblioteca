@@ -39,6 +39,12 @@ public class SistemaBiblioteca {
         case 5:
           buscarLivro();
           break;
+        case 6:
+          emprestarLivro();
+          break;
+        case 7:
+          devolverLivro();
+          break;
         case 0:
           livroView.mostrarMensagem("Saindo do sistema...");
           break;
@@ -48,7 +54,7 @@ public class SistemaBiblioteca {
       }
     } while (opcao != 0);
   }
-
+  
   private void mostrarMenu() {
     livroView.mostrarMensagem("=== Menu ===");
     livroView.mostrarMensagem("1. Cadastrar Livro");
@@ -56,11 +62,12 @@ public class SistemaBiblioteca {
     livroView.mostrarMensagem("3. Atualizar Livro");
     livroView.mostrarMensagem("4. Excluir Livro");
     livroView.mostrarMensagem("5. Buscar Livro");
+    livroView.mostrarMensagem("6. Emprestar Livro");
+    livroView.mostrarMensagem("7. Devolver Livro");
     livroView.mostrarMensagem("0. Sair");
     livroView.mostrarMensagem("============");
     livroView.mostrarMensagem("Escolha uma opção:");
   }
-
   private void cadastrarLivro() {
     scanner.nextLine(); // Limpar o buffer do scanner
     livroView.mostrarMensagem("Digite o título do livro:");
@@ -69,8 +76,10 @@ public class SistemaBiblioteca {
     String autor = scanner.nextLine();
     livroView.mostrarMensagem("Digite o número de páginas do livro:");
     int numPaginas = scanner.nextInt();
+    livroView.mostrarMensagem("Digite o número de copias dos livros disponiveis:");
+    int numCopias = scanner.nextInt();
 
-    Livro novoLivro = new Livro(titulo, autor, numPaginas);
+    Livro novoLivro = new Livro(titulo, autor, numPaginas, numCopias);
     String retorno = livroController.cadastrarLivro(novoLivro);
     livroView.mostrarMensagem(retorno);
   }
@@ -97,6 +106,9 @@ public class SistemaBiblioteca {
       livroView.mostrarMensagem("Digite o novo número de páginas do livro:");
       int numPaginas = scanner.nextInt();
       livro.setNumPaginas(numPaginas);
+      livroView.mostrarMensagem("Digite o novo número de copias disponiveis:");
+      int numCopias = scanner.nextInt();
+      livro.setNumCopias(numCopias);
       String retorno = livroController.atualizarLivro(livro);
       livroView.mostrarMensagem(retorno);
     } else {
@@ -121,4 +133,19 @@ public class SistemaBiblioteca {
       livroView.mostrarMensagem("Livro não encontrado!");
     }
   }
+    // add emprestar e devolver
+private void emprestarLivro() {
+  livroView.mostrarMensagem("Digite o ID do livro a ser emprestado:");
+  int id = scanner.nextInt();
+  String retorno = livroController.emprestarLivro(id);
+  livroView.mostrarMensagem(retorno);
+}
+
+private void devolverLivro() {
+  livroView.mostrarMensagem("Digite o ID do livro a ser devolvido:");
+  int id = scanner.nextInt();
+  String retorno = livroController.devolverLivro(id);
+  livroView.mostrarMensagem(retorno);
+}
+
 }

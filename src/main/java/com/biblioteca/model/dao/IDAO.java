@@ -1,7 +1,6 @@
-package  com.biblioteca.model.dao;
+package com.biblioteca.model.dao;
 
 import java.util.List;
-
 import com.biblioteca.model.entity.AbstractEntity;
 
 public interface IDAO {
@@ -16,4 +15,8 @@ public interface IDAO {
 
   List<AbstractEntity> listar();
 
+  // Adicionando os métodos emprestar e devolver
+  void emprestar(int id);
+
+  void devolver(int id);
 }
