@@ -6,8 +6,8 @@ Implementar um sistema simples que apresenta via CLI um menu de Biblioteca com a
 - Atualizar Livro :heavy_check_mark:
 - Excluir Livro :heavy_check_mark:
 - Buscar Livro :heavy_check_mark:
-- Emprestar Livro :x:
-- Devolver Livro :x:
+- Emprestar Livro :heavy_check_mark:
+- Devolver Livro :heavy_check_mark:
 
 <h1> ⚙  Pré-requisitos do sistema  </h1>
 
