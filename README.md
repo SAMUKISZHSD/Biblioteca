@@ -29,10 +29,6 @@ Implementar um sistema simples que apresenta via CLI um menu de Biblioteca com a
  </div>
 <div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> demo01
 
 
 
